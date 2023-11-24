@@ -1,0 +1,19 @@
+[project]
+# Support Python 3.10+.
+requires-python = ">=3.11"
+
+[tool.ruff]
+# Decrease the maximum line length to 79 characters.
+line-length = 120
+ignore = [
+    "F401",  # imported but unused
+    "PLR2004",  # magic value
+    "E402",  # module level import not at top of file
+]
+
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "UP",  # pyupgrade
+    "PL",  # pylint
+]

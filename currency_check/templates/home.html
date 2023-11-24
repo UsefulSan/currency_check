@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Курс валюты</title>
+</head>
+<body>
+<form action="/" method="get">
+    <h1>Курс рубля на сегодня</h1>
+    <p> Доллар {{ rate[0] }} Евро {{ rate[1] }} </p>
+</form>
+<label for="date">Выберите историческую дату, на которую хотите узнать курс валюты </label>
+
+<form action="/" method="post">
+    <input type="date" id="date" name="date"/>
+    <button type="submit">Отправить</button>
+</form>
+
+{% if historic_rate %}
+    <p>На {{ selected_date }} Доллар {{ historic_rate[0] }} Евро {{ historic_rate[1] }}</p>
+{% endif %}
+
+</body>
+</html>
